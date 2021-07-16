@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/login_RL">
+
+    <RelativeLayout
+        android:id="@+id/login_RV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/img_login_LL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="212dp"
+                android:background="@drawable/logintop_pet_lie"
+                />
+        </LinearLayout>
+
+<!--LL 1 -->
+        <LinearLayout
+            android:id="@+id/LL1"
+            android:layout_below="@+id/img_login_LL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="30dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:text="@string/userName_person"
+                android:layout_weight="0.5"/>
+
+            <EditText
+                android:id="@+id/username_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+<!--LL 2 -->
+        <LinearLayout
+            android:id="@+id/LL2"
+            android:layout_below="@+id/LL1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:text="@string/userPassword_person"
+                android:layout_weight="0.5" />
+
+            <EditText
+                android:id="@+id/password_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:ems="10"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+<!--LL 3 -->
+        <LinearLayout
+            android:id="@+id/LL3"
+            android:layout_below="@+id/LL2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="156dp"
+                android:layout_height="58dp"
+                android:textSize="16sp"
+                android:background="@drawable/login_btn_shape"
+                android:text="登录" />
+
+            <TextView
+                android:id="@+id/register"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#E16767"
+                android:clickable="true"
+                android:text="还没有账号？去注册" />
+
+
+        </LinearLayout>
+
+<!--LL 4 -->
+        <LinearLayout
+            android:id="@+id/LL4"
+            android:layout_below="@+id/LL3"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.huawei.hms.support.hwid.ui.HuaweiIdAuthButton
+                android:id="@+id/huaweiLoginButton"
+                android:layout_marginTop="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

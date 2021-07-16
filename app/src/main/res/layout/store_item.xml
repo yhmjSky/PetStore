@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/store_item"
+    android:layout_margin="10dp">
+
+    <androidx.percentlayout.widget.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_thumbnail"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="180dp"
+                android:layout_height="148dp"
+                android:src="@drawable/ic_success"
+                android:scaleType="centerCrop"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thumbnail_LL"
+            android:layout_toEndOf="@+id/img_thumbnail"
+            android:padding="3dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/store_name"
+                android:text="xxx"
+                android:textSize="22sp"
+                android:textColor="#101010"
+                android:layout_marginStart="18dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/store_inf_LL"
+            android:layout_below="@+id/thumbnail_LL"
+            android:layout_toEndOf="@+id/img_thumbnail"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/store_inf"
+                android:text="xxx"
+                android:textSize="15sp"
+                android:textColor="#151414"
+                android:layout_marginStart="12dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_below="@+id/store_inf_LL"
+            android:layout_marginBottom="2dp"
+            android:layout_toEndOf="@+id/img_thumbnail"
+            android:padding="2dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/store_star"
+                android:text="xxx"
+                android:textSize="23sp"
+                android:textColor="#E15E5E"
+                android:layout_marginEnd="12dp"/>
+        </LinearLayout>
+
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+
+
+</RelativeLayout>

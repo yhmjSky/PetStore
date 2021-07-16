@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:id="@+id/person_GL"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--    未登录时布局如下-->
+        <GridLayout
+            android:id="@+id/unloginperson"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="3"
+            android:visibility="visible"
+            android:orientation="horizontal"
+            android:rowCount="4">
+
+            <ImageView
+                android:id="@+id/unLogin_icon"
+                android:clickable="true"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                app:srcCompat="@drawable/ic_baseline_person" />
+
+            <TextView
+                android:clickable="true"
+                android:id="@+id/unLogin_text"
+                android:gravity="center"
+                android:layout_width="256dp"
+                android:layout_height="88dp"
+                android:textSize="18sp"
+                android:text="未登录" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:padding="6dp"
+                android:gravity="center"
+                android:layout_row="3"
+                android:layout_columnSpan="2"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+
+        </GridLayout>
+
+        <!--    用户已登录布局如下-->
+        <GridLayout
+            android:id="@+id/loginedperson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:rowCount="4">
+
+            <ImageView
+                android:id="@+id/logined_icon"
+                android:clickable="true"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                app:srcCompat="@drawable/ic_baseline_person" />
+
+            <TextView
+                android:id="@+id/personName"
+                android:layout_width="194dp"
+                android:layout_height="88dp"
+                android:layout_columnSpan="2"
+                android:textSize="20sp"
+                android:gravity="center_vertical"
+                android:text="用户名" />
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_row="0"
+                android:layout_column="3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/person_detail_inf"
+                    />
+
+                <ImageView
+                    android:id="@+id/toPersonInf"
+                    android:layout_width="41dp"
+                    android:layout_height="41dp"
+                    android:clickable="true"
+                    android:src="@drawable/ic_baseline_tonext"
+                    />
+            </LinearLayout>
+
+
+            <!--    历史-->
+            <androidx.percentlayout.widget.PercentRelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    app:layout_widthPercent="25%"
+                    >
+
+                    <ImageView
+                        android:id="@+id/history"
+                        android:layout_width="92dp"
+                        android:layout_height="92dp"
+                        android:padding="12dp"
+                        app:srcCompat="@drawable/ic_baseline_history" />
+
+                    <TextView
+                        android:layout_marginTop="-12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/person_browse_history"/>
+
+                </LinearLayout>
+
+            </androidx.percentlayout.widget.PercentRelativeLayout>
+
+            <!--    收藏-->
+            <androidx.percentlayout.widget.PercentRelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="1"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    app:layout_widthPercent="25%">
+
+                    <!--        <LinearLayout-->
+                    <!--            android:layout_height="wrap_content"-->
+                    <!--            android:layout_width="wrap_content"-->
+                    <!--            android:layout_marginTop="6dp"/>-->
+
+
+                    <ImageView
+                        android:id="@+id/star"
+                        android:layout_width="92dp"
+                        android:layout_height="92dp"
+                        android:padding="12dp"
+                        app:srcCompat="@drawable/ic_baseline_star" />
+
+                    <TextView
+                        android:layout_marginTop="-12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="收藏"/>
+
+
+                </LinearLayout>
+
+            </androidx.percentlayout.widget.PercentRelativeLayout>
+
+            <!--    订单-->
+            <androidx.percentlayout.widget.PercentRelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="2"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    app:layout_widthPercent="25%">
+
+                    <ImageView
+                        android:id="@+id/aaaa"
+                        android:layout_width="92dp"
+                        android:layout_height="92dp"
+                        android:padding="12dp"
+                        app:srcCompat="@drawable/ic_baseline_orderlist" />
+
+                    <TextView
+                        android:layout_marginTop="-12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="订单"/>
+
+                </LinearLayout>
+
+            </androidx.percentlayout.widget.PercentRelativeLayout>
+
+            <!--    会员-->
+            <androidx.percentlayout.widget.PercentRelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="3"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    app:layout_widthPercent="25%">
+
+                    <ImageView
+                        android:id="@+id/vip"
+                        android:layout_width="92dp"
+                        android:layout_height="92dp"
+                        android:padding="0dp"
+                        app:srcCompat="@drawable/ic_baseline_vip" />
+
+                    <TextView
+                        android:layout_marginTop="-12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="会员"/>
+
+
+                </LinearLayout>
+
+            </androidx.percentlayout.widget.PercentRelativeLayout>
+
+
+
+        </GridLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="vertical"
+            android:padding="6dp"
+            android:gravity="center">
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/ServiceLL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_headset"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:text="服务中心"/>
+
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:src="@drawable/ic_baseline_tonext"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/redEnvelopeLL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_money"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:text="签到领现金"/>
+
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:src="@drawable/ic_baseline_tonext"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/useAgreementLL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_agreement"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:text="用户协议"/>
+
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:src="@drawable/ic_baseline_tonext"
+                />
+
+        </LinearLayout>
+
+<!--        退出登录，未登录隐藏-->
+        <LinearLayout
+            android:id="@+id/exitLoginLL"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_exit"/>
+            <TextView
+                android:id="@+id/exit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:text="退出登录"/>
+
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:src="@drawable/ic_baseline_tonext"
+                />
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</FrameLayout>

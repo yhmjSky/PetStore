@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.VipActivity">
+
+    <LinearLayout
+        android:id="@+id/vipll01"
+        android:padding="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="会员中心"
+            android:textSize="29dp"
+            android:background="#CECEEA"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/vip1102"
+        android:layout_below="@+id/vipll01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/vipUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="xxx"
+            android:textSize="26dp" />
+
+        <TextView
+            android:id="@+id/vipLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xxx"
+            android:textColor="#857B7B"
+            android:textSize="26dp" />
+
+    </LinearLayout>
+
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/vip1103"-->
+<!--        android:layout_below="@+id/vip1102"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:padding="14dp"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="权限"-->
+<!--            android:textSize="23sp" />-->
+
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="23sp" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="23sp" />-->
+
+
+<!--    </LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/vip1103"
+        android:layout_below="@+id/vip1102"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/applyVip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:text="申请会员"
+            android:textSize="23sp" />
+
+        <ImageView
+            android:layout_width="42dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:src="@drawable/ic_baseline_tonext"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/vip1104"
+        android:layout_below="@+id/vip1103"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/toSuperVip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:text="充值超级会员"
+            android:textSize="23sp" />
+
+        <ImageView
+            android:layout_width="42dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:src="@drawable/ic_baseline_tonext"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
+

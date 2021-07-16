@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="首页"
+        android:id="@+id/home"
+        android:icon="@drawable/ic_baseline_home"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:title="视频"
+        android:id="@+id/video"
+        android:icon="@drawable/ic_baseline_video"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:title="消息"
+        android:id="@+id/message"
+        android:icon="@drawable/ic_baseline_message"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:title="我的"
+        android:id="@+id/person"
+        android:icon="@drawable/ic_baseline_person"
+        app:showAsAction="ifRoom"/>
+
+
+
+</menu>
